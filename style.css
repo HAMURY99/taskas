@@ -1,0 +1,608 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #080808;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+}
+/* تابع القائمة الجانبية
+*/
+ul{
+    list-style: none;
+    padding: 25px;
+}
+ul li{
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+ul li img{
+    width: 50px;
+    margin-right: 1px;
+    box-shadow: #d10707;
+    
+  
+
+}
+
+
+
+.sidenav .mode{
+    background: var(--white);
+}
+.sidenav.mode.moon-sun{
+    height: 20px;
+    width: 10px;
+    display: flex;
+    align-items: center;
+}
+.sidenav.mode i{
+    position:absolute;
+}
+.ul.mode.img.i{
+    opacity: 1;
+}
+#as button{
+    padding: -10px;
+    width: 100%;
+    background: hsl(0, 11%, 98%);
+    border: 2px solid  rgb(196, 4, 158);
+    color:rgb(7, 5, 0);
+    margin-top: -25px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+#as button:hover{
+    box-shadow: 0 0 0 12px transparent;
+    color:white;
+    background-color: hsl(203, 77%, 12%);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 12px;
+}
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+    display: flex;
+
+/*   التاريخ  */
+}
+input[type="date"]{
+    background-color:#f3f5f5;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    top: 5%;
+    right: 12%;
+    border: 2px solid rgb(61, 9, 250);
+    border-radius: 7px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+input[type="date"]:hover{
+    box-shadow: 0 0 0 12px transparent;
+    color:white;
+    background-color: hsl(203, 98%, 16%);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #fcf9f9;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+#sidenav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background:cadetblue;  
+    z-index: 2;
+    
+}
+.sidenav ul:hover{
+    background-color: var(--white);
+}
+nav ul li{
+    list-style: none;
+    margin: 70px -22px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+#menuBtn{
+    width: 50px;
+    position: fixed;    
+    right: 30px;
+    top:17px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 50%;
+} 
+
+
+
+
+
+
+    
+
+
+.wrapper .screen {
+    min-width: 100%;
+    flex: 1;
+    transition: all 0.3s;
+    
+}
+@media (min-width:767px){
+    .wrapper{
+        height: 45rem;
+        width: 25rem;
+        border-radius: 40px;
+        border: 10px solid #2e2e2e;
+    }
+}
+
+
+
+.screen-backdrop {
+    width: 135%;
+    height: 25rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 50% 50%;
+    background:cadetblue;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.wrapper.show-category .home-screen {
+    transform: translateX(-100%);
+}
+
+.wrapper.show-category .category-screen {
+    transform: translateX(-100%);
+}
+
+.wrapper.show-category .screen-backdrop {
+    transform: translate(-50%, -60%)
+}
+
+.head-wrapper {
+    padding:0 30px;
+}
+
+.menu-btn {
+    width: 3rem;
+    cursor: pointer;
+    color: #ffffff;
+
+
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.welcome h1 {
+    font-size: 2rem;
+    color: rgb(247, 247, 250);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.welcome p {
+    font-weight: 500;
+    color: rgb(8, 8, 8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    
+}
+
+
+.welcome .img {
+    position: relative;
+}
+
+.welcome .img .backdrop {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 4.8rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #f70404;
+    z-index: -1;
+}
+
+.welcome .img img {
+    width: 5rem;
+}
+
+.categories-wrapper {
+    margin-top: 1rem;
+    padding: 0 30px;
+    height: calc(100% - 8rem);
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.categories {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px 5px #3106f523;
+    transition: all 0.3s;
+
+}
+
+.category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px 5px #2f078b40;
+}
+
+.category .left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.category .left img {
+    width: 3rem;
+}
+
+.category .content h1 {
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.category .content p {
+    color: #0418f9;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.category .options {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.category:hover .options {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category .toggle-btn {
+    width: 2rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.category .toggle-btn:hover {
+    opacity: 1;
+}
+
+
+/* Category Screen */
+.category-screen .head-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-screen .head-wrapper svg {
+    width: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.category-details {
+    padding: 0 30px;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category-details img {
+    width: 4rem;
+}
+
+.category-details .details p {
+    opacity: 0.6;
+}
+
+/* tasks */
+.tasks-wrapper {
+    padding: 0 30px;
+    margin-top: 1rem;
+    height: calc(100% - 12rem);
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.tasks {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.task {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: max-content;
+    cursor: pointer;
+}
+
+
+.task input {
+    display: none;
+}
+
+.task .checkmark {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    border: 1px solid #020202;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task .checkmark svg {
+    width: 1rem;
+    color: #1d06ed;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.task:hover .checkmark svg {
+    opacity: 1;
+}
+
+.task .checkmark svg path {
+    stroke-width: 3;
+}
+
+.task input:checked~.checkmark {
+    background-color: #1e0ef7;
+}
+
+.task input:checked~.checkmark svg {
+    opacity: 1;
+    color: #ffffff;
+}
+
+.task input:checked~p {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-wrapper .delete {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #bc08a4;
+    cursor: pointer;
+    background-color: rgba(56, 7, 140, 0.031);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.task-wrapper:hover .delete {
+    opacity: 1;
+    visibility: visible;
+}
+
+.task-wrapper .delete:hover {
+    color: rgb(15, 15, 15);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.no-tasks {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+/* Add Task */
+.add-task-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e808f8;
+    transition: all 0.3s;
+}
+
+.add-task-btn:hover {
+    transform: scale(1.1);
+}
+
+.add-task-btn.active {
+    z-index: 1;
+    bottom: 20rem;
+    transform: rotate(45deg);
+}
+
+.add-task-btn svg {
+    width: 2rem;
+    color: #fff;
+}
+
+.add-task {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    transition: all 0.3s;
+}
+
+.add-task.active {
+    bottom: 0;
+}
+
+.add-task .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group label {
+    display: block;
+    width: 100%;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    border: 1px solid #750ce6;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input-group label {
+    width: max-content;
+    padding: 0 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #0c0c0c;
+    margin-bottom: 5px;
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btns button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+button.add-btn {
+    background-color: #3e0895;
+    color: #fff
+}
+
+.add-task-backdrop {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135%;
+    height: 20rem;
+    border-radius: 50% 50% 0 0;
+    background-color: #fff;
+}
+
+.black-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: #00000023;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.black-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
